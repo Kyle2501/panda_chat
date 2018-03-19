@@ -1,0 +1,23 @@
+application: panda-chat
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+- url: /favicon\.ico
+  static_files: pics/favicon.ico
+  upload: pics/favicon\.ico
+
+- url: /files
+  static_dir: files
+
+- url: /fonts
+  static_dir: fonts
+
+- url: /pics
+  static_dir: pics
+
+- url: /.*
+  script: panda-chat-server.app
